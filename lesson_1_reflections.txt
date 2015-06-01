@@ -1,46 +1,47 @@
-How did viewing a diff between two versions of a file help you see the bug that
-was introduced?
+How did viewing a diff between two versions of a file help you see the bug 
+that was introduced?
 
-    Fill in your answer here
+  It allows quickly to identify differences, which are most likely to be the cause of new bugs.
 
 How could having easy access to the entire history of a file make you a more
 efficient programmer in the long term?
 
-    Fill in your answer here
+  By allowing one to easily compare version changes for bugs and even revert or restore old features.
 
 What do you think are the pros and cons of manually choosing when to create a
 commit, like you do in Git, vs having versions automatically saved, like Google
 docs does?
 
-    Fill in your answer here
-
+  Pros: can be splitted to logical units
+  Cons: is susceptible to user errors, for example the units are to large or you lost a bunch of work without committing
+   
 Why do you think some version control systems, like Git, allow saving multiple
 files in one commit, while others, like Google Docs, treat each file separately?
 
-    Fill in your answer here
+  It makes sense for Git to have such a feature because some changes in code might span across different files.  
+  For example, changing a function in a file that is used in another file will necessitate changes to both files.
+  Or separating declaration to definition which is typically in C++, forces you to modify both files when changing a function signature.  
 
 How can you use the commands git log and git diff to view the history of files?
 
-    Fill in your answer here
+  Git log will show the history of changes, and git diff allows to compare two commits.
 
 How might using version control make you more confident to make changes that
 could break something?
 
-    Fill in your answer here
+  We are able to restore the previous running version and track all changes. So that we are able 
+  solve problems fast.  
 
 Now that you have your workspace set up, what do you want to try using Git for?
 
-    Fill in your answer here
-    
-How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+  Use it as source control for private development projects.
+  
+Commands:
 
-    Fill in your answer here
-    
-Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
-
-    Fill in your answer here
-    
-Now that you have your workspace set up, what do you want to try using Git for?
-
-    Fill in your answer here
-    
+q |    exit git log!
+git log  |    List the commits and show which files have changed
+git log --stat  |    Show addition information about the commits
+git diff id1 id2  |    Compare two commits
+git clone  |    Create a local copy/clone from the repository
+git config --global color.ui auto |    get colored diff output
+git checkout  |    Shows a previous version of the file. This is not a checkout to edit like in SVN or TFS!
